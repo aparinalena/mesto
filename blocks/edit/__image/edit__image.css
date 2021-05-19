@@ -1,10 +1,10 @@
-.profile__edit_image:hover {
+.edit__image:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .profile__edit_image {
+    .edit__image {
         width: 18px;
     }
 }

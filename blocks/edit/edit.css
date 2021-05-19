@@ -1,4 +1,4 @@
-.profile__edit {
+.edit {
     height: 24px;
     width: 24px;
     align-self: center;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 768px) {
-    .profile__edit {
+    .edit {
         width: 18px;
         height: 18px;
         margin-left: 10px;

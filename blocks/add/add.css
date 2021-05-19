@@ -1,11 +1,11 @@
-.profile__add {
+.add {
     width: 150px;
     align-self: center;
     margin-left: 244px;
 }
 
 @media (max-width: 1024px) {
-    .profile__add {
+    .add {
         margin: 0;
     }
 }
