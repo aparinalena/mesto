@@ -1,0 +1,10 @@
+.button__add-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.button__add-image:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

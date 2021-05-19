@@ -1,0 +1,15 @@
+.profile__button_edit {
+    height: 24px;
+    width: 24px;
+    align-self: center;
+    margin-left: 14px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .profile__button_edit {
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+    }
+}
