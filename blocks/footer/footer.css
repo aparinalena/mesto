@@ -3,18 +3,12 @@
     color: #FFFFFF;
     max-width: 880px;
     margin: 0 auto;
-    padding: 0 calc((100vw - 282px - 282px - 20px)/2);
+    padding: 0;
 }
 
 @media (max-width: 1024px) {
     .footer {
         padding: 0 calc((100vw - 282px - 282px - 20px)/2);
         margin: 0;
-    }
-}
-
-@media (max-width: 1440px) {
-    .footer {
-        padding: 0;
     }
 }

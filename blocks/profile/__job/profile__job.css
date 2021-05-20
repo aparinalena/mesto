@@ -2,10 +2,8 @@
     font-family: Inter;
     color: white;
     margin: 0;
-    display: inline-block;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 16px;
     max-width: 336px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -16,7 +14,6 @@
     .profile__job {
         font-size: 14px;
         line-height: 17px;
-        margin-top: 14px;
         max-width: 282px;
     }
 }
@@ -24,5 +21,6 @@
 @media (max-width: 768px) {
     .profile__job {
         margin-bottom: 36px;
+        align-self: center;
     }
 }

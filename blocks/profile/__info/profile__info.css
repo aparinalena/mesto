@@ -2,13 +2,15 @@
     margin-left: 30px;
     max-width: 336px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 @media (max-width: 768px) {
     .profile__info {
-        align-items: center;
-        margin-top: 26px;
-        margin-left: 0;
-        text-align: center;
+        margin: 26px 0 0;
+        gap: 14px;
+        width: 282px;
     }
 }

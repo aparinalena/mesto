@@ -1,0 +1,29 @@
+.profile__container {
+    width: 336px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+@media (max-width: 1024px) {
+    .profile__container {
+        justify-content: unset;
+        gap: 14px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile__container {
+        justify-content: center;
+        width: 282px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .profile__container {
+        gap: 10px;
+    }
+}

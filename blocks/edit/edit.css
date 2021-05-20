@@ -1,15 +1,13 @@
 .edit {
     height: 24px;
     width: 24px;
-    align-self: center;
     margin-left: 14px;
-    display: inline-block;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
     .edit {
         width: 18px;
         height: 18px;
-        margin-left: 10px;
     }
 }
