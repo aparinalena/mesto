@@ -13,7 +13,5 @@
 @media (max-width: 768px) {
     .popup__container {
         min-width: 89%;
-        left: 0;
-        top: 20%;
     }
 }

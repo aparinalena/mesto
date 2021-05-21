@@ -5,6 +5,7 @@
     border: none;
     padding: 0;
     align-self: center;
+    background-color: transparent;
 }
 
 .element__button:hover {
