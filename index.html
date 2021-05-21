@@ -6,83 +6,91 @@
   <title>Место. Россия</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
+
 <body class="root">
   <div class="page">
     <header class="header">
-      <div class="header__container">
         <img class="header__logo" src="./images/header-logo.svg" alt="логотип">
-      </div>
     </header>
-
- <section class="profile">
-      <img class="profile__avatar" src="./images/avatar.jpg" alt="фото профиля">
-      <div class="profile__info">
-        <div class="profile__container">
-          <p class="profile__name">Жак-Ив Кусто</p>
-          <div class="edit">
-            <img class="edit__image popup-open" src="./images/edit button.png">
+    <main class="content">
+      <section class="profile">
+        <img class="profile__avatar" src="./images/avatar.jpg" alt="фото профиля">
+        <div class="profile__info">
+          <div class="profile__container">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button type="button" class="edit popup-open" aria-label="Редактировать"></button>
+          </div>
+          <p class="profile__job">Исследователь океана</p>
+        </div>
+        <button type="button" class="add" aria-label="Добавить"></button>
+      </section> 
+  
+      <section class="elements">
+        <div class="element">
+          <img class="element__image" src="./images/tokyo.jpg" alt="Токио">
+          <div class="element__info">
+            <h2 class="element__title">Токио</h2>
+            <button class="element__button" type="button"></button>
           </div>
         </div>
-        <p class="profile__job">Исследователь океана</p>
+
+        <div class="element">
+          <img class="element__image" src="./images/kyoto.jpg" alt="Киото">
+          <div class="element__info">
+            <h2 class="element__title">Киото</h2>
+            <button class="element__button" type="button"></button>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="element__image" src="./images/mount-fuji.jpg" alt="Гора Фудзи">
+          <div class="element__info">
+            <h2 class="element__title">Гора Фудзи</h2>
+            <button class="element__button" type="button"></button>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="element__image" src="./images/fushimi.jpg" alt="Храмы Фусими Инари">
+          <div class="element__info">
+            <h2 class="element__title">Храмы Фусими Инари</h2>
+            <button class="element__button" type="button"></button>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="element__image" src="./images/tenryu-ji.jpg" alt="Храм Тенрю-дзи">
+          <div class="element__info">
+            <h2 class="element__title">Храм Тенрю-дзи</h2>
+            <button class="element__button" type="button"></button>
+          </div>
+        </div>
+
+        <div class="element">
+          <img class="element__image" src="./images/torii-gate.jpg" alt="Тории храма Хаконе">
+          <div class="element__info">
+            <h2 class="element__title">Тории храма Хаконе</h2>
+            <button class="element__button" type="button"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__paragraph">&copy; 2020 Mesto Russia</p>
+    </footer>
+
+    <div class="popup">
+      <div class="popup__container">
+       <button type="button" class="popup__close" aria-label="Закрыть попап"></button>
+       <form class="popup__form" name="form">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input type="text" class="popup__item popup__item_el_name" id="name" name="name" placeholder="Имя" required>
+          <input type="text" class="popup__item popup__item_el_job" id="job" name="job" placeholder="О себе" required>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
       </div>
-      <div class="add">
-        <img class="add__image" src="./images/Add Button.png">
-      </div>
-  </section> 
-  
-  <section class="elements">
-    <div class="element">
-      <img class="element__image" src="./images/tokyo.jpg" alt="Токио">
-      <p class="element__title">Токио</p>>
-      <div class="element__button"></div>
     </div>
-
-  <div class="element">
-    <img class="element__image" src="./images/kyoto.jpg" alt="Киото">
-    <p class="element__title">Киото</p>
-    <div class="element__button"></div>
-  </div>
-
-  <div class="element">
-    <img class="element__image" src="./images/mount fuji.jpg" alt="Гора Фудзи">
-    <p class="element__title">Гора Фудзи</p>
-    <div class="element__button"></div>
-  </div>
-
-  <div class="element">
-    <img class="element__image" src="./images/Fushimi Inari-taisha.jpg" alt="Храмы Фусими Инари">
-    <p class="element__title">Храмы Фусими Инари</p>
-    <div class="element__button"></div>
-  </div>
-
-  <div class="element">
-    <img class="element__image" src="./images/Tenryu-ji Temple, Kyōto-shi, Japan.jpg" alt="Храм Тенрю-дзи">
-    <p class="element__title">Храм Тенрю-дзи</p>
-    <div class="element__button"></div>
-  </div>
-
-    <div class="element">
-      <img class="element__image" src="./images/torii gate hokone.jpg" alt="Тории храма Хаконе">
-      <p class="element__title">Тории храма Хаконе</p>
-      <div class="element__button"></div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p class="footer__paragraph">&#169; 2020 Mesto Russia</p>
-  </footer>
-
-  <section class="popup">
-    <div class="popup__container">
-      <button type="button" class="popup__close" aria-label="Закрыть попап"></button>
-      <form class="popup__form">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <input type="text" class="popup__item popup__item_name" id="name" name="name" placeholder="Имя" required>
-        <input type="text" class="popup__item popup__item_job" id="job" name="job" placeholder="О себе" required>
-        <input type="submit" class="popup__button" value="Сохранить">
-      </form>
-    </div>
-  </section>
 
   </div>
   <script src="./scripts/script.js"></script>

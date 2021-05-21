@@ -1,6 +1,5 @@
 .profile__container {
     width: 336px;
-    height: 39px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,8 +9,8 @@
 @media (max-width: 1024px) {
     .profile__container {
         justify-content: unset;
-        gap: 14px;
-        width: 300px;
+        gap: 10px;
+        width: 250px;
     }
 }
 
@@ -19,11 +18,5 @@
     .profile__container {
         justify-content: center;
         width: 282px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .profile__container {
-        gap: 10px;
     }
 }

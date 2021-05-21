@@ -1,9 +1,9 @@
 .popup__container {
+    font-family: 'Inter', Arial, sans-serif;
     position: relative;
     background: white;
     min-width: 430px;
-    height: 330px;
-    top: 35%;
+    align-self: center;
     box-shadow: 0px 0px 25px rgb(0, 0, 0, .15);
     border-radius: 10px;
     display: flex;
@@ -13,7 +13,6 @@
 @media (max-width: 768px) {
     .popup__container {
         min-width: 89%;
-        height: 322px;
         left: 0;
         top: 20%;
     }

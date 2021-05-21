@@ -1,11 +1,10 @@
 .element__button {
-    background-image: url(../../../images/like_button.png);
-    float: right;
-    margin-right: 30px;
-    margin-top: 30px;
+    background-image: url(../../../images/like_disabled.svg);
     width: 22px;
     height: 19px;
-    display: inline-block;
+    border: none;
+    padding: 0;
+    align-self: center;
 }
 
 .element__button:hover {
@@ -14,5 +13,5 @@
 }
 
 .element__button:active {
-    background-image: url(../../../images/like_active.png);
+    background-image: url(../../../images/like_active.svg);
 }

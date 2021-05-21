@@ -11,7 +11,7 @@
 
 @media (max-width: 1280px) {
     .elements {
-        padding: 50px calc((100vw - 282px - 282px - 282px - 17px - 17px)/2) 66px;
+        padding: 50px calc((100vw - 880px)/2) 66px;
     }
 }
 
@@ -19,14 +19,13 @@
     .elements {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 36px calc((100vw - 282px - 282px - 20px)/2) 48px;
+        padding: 36px calc((100vw - 584px)/2) 48px;
     }
 }
 
 @media (max-width: 768px) {
     .elements {
         grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
         padding: 36px calc((100% - 282px)/2) 48px;
     }
 }

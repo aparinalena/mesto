@@ -10,9 +10,9 @@ closePopup.addEventListener('click', function() {
     popup.classList.remove('popup_opened');
 })
 
-let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__item_name');
-let jobInput = document.querySelector('.popup__item_job');
+let formElement = document.querySelector('form');
+let nameInput = document.querySelector('.popup__item_el_name');
+let jobInput = document.querySelector('.popup__item_el_job');
 nameInput.value = document.querySelector('.profile__name').innerHTML;
 jobInput.value = document.querySelector('.profile__job').innerHTML;
 
