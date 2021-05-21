@@ -1,5 +1,5 @@
-.add {
-    background-image: url(../../images/add_button.svg);
+.profile__add {
+    background-image: url(../../../images/add_button.svg);
     width: 150px;
     align-self: center;
     margin-left: auto;
@@ -9,15 +9,15 @@
     padding: 0;
 }
 
-.add:hover {
+.profile__add:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .add {
+    .profile__add {
         margin: 0;
-        background-image: url(../../images/add_button-l.svg);
-        width: 282px;
+        background-image: url(../../../images/add_button-l.svg);
+        min-width: 282px;
     }
 }

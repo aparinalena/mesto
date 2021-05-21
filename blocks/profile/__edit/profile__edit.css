@@ -1,5 +1,5 @@
-.edit {
-    background-image: url(../../images/edit_button.svg);
+.profile__edit {
+    background-image: url(../../../images/edit_button.svg);
     background-color: black;
     border: none;
     padding: 0;
@@ -7,13 +7,13 @@
     width: 24px;
 }
 
-.edit:hover {
+.profile__edit:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .edit {
+    .profile__edit {
         width: 18px;
         height: 18px;
         background-size: cover;

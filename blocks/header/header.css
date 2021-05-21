@@ -19,3 +19,9 @@
         padding: 0 calc((100% - 282px)/2);
     }
 }
+
+@media (max-width: 320px) {
+    .header {
+        padding: 0;
+    }
+}
