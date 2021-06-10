@@ -1,4 +1,4 @@
-.element__button {
+.element__like {
     background-image: url(../../../images/like_disabled.svg);
     width: 22px;
     height: 19px;
@@ -8,11 +8,7 @@
     background-color: transparent;
 }
 
-.element__button:hover {
+.element__like:hover {
     opacity: 0.5;
     cursor: pointer;
-}
-
-.element__button:active {
-    background-image: url(../../../images/like_active.svg);
 }
