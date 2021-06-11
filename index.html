@@ -13,6 +13,7 @@
         <img class="header__logo" src="./images/header-logo.svg" alt="логотип">
     </header>
     <main class="content">
+      
       <section class="profile">
         <img class="profile__avatar" src="./images/avatar.jpg" alt="фото профиля">
         <div class="profile__info">
@@ -25,61 +26,7 @@
         <button type="button" class="profile__add add-open" aria-label="Добавить"></button>
       </section> 
   
-      <section class="elements">
-        <!--<div class="element">
-          <img class="element__image" src="./images/tokyo.jpg" alt="Токио">
-          <div class="element__info">
-            <h2 class="element__title">Токио</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div>
-
-        <div class="element">
-          <img class="element__image" src="./images/kyoto.jpg" alt="Киото">
-          <div class="element__info">
-            <h2 class="element__title">Киото</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div>
-
-        <div class="element">
-          <img class="element__image" src="./images/mount-fuji.jpg" alt="Гора Фудзи">
-          <div class="element__info">
-            <h2 class="element__title">Гора Фудзи</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div>
-
-        <div class="element">
-          <img class="element__image" src="./images/fushimi.jpg" alt="Храмы Фусими Инари">
-          <div class="element__info">
-            <h2 class="element__title">Храмы Фусими Инари</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div>
-
-        <div class="element">
-          <img class="element__image" src="./images/tenryu-ji.jpg" alt="Храм Тенрю-дзи">
-          <div class="element__info">
-            <h2 class="element__title">Храм Тенрю-дзи</h2>
-            <button class="element__like" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div>
-
-        <div class="element">
-          <img class="element__image" src="./images/torii-gate.jpg" alt="Тории храма Хаконе">
-          <div class="element__info">
-            <h2 class="element__title">Тории храма Хаконе</h2>
-            <button class="element__lik" type="button"></button>
-          </div>
-          <button class="element__trash" type="button"></button>
-        </div> -->
-      </section>
+      <section class="elements"></section>
     </main>
 
     <footer class="footer">
@@ -108,7 +55,13 @@
         </form>
       </div>
     </div>
-    
+    <div class="popup popup_type_image">
+      <div class="popup__image-container">
+       <button type="button" class="popup__close" aria-label="Закрыть попап"></button>
+       <img class="popup__image" alt="" src="">
+       <p class="popup__image-caption"></p>
+      </div>
+    </div>
   </div>
 
   <template id="element-template">
