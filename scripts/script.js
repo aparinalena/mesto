@@ -50,10 +50,6 @@ const initialCards = [
 const elementTemplate = document.querySelector('#element-template').content;
 const elementsItems = document.querySelector('.elements');
 
-function openImage () {
-  popupImage.classList.add('popup_opened');
-}
-
 function renderInitialCards() {
   initialCards.forEach(createCard);
 }
@@ -69,7 +65,7 @@ function createCard({name, link}) {
     popupImageElement.src = link;
     popupImageElement.alt = name;
     popupImageCaption.textContent = name;
-    openImage();
+    openPopup(popupImage);
   });
   elementsItems.prepend(cardElement);
 
@@ -102,39 +98,43 @@ function submitAddForm (evt) {
   createCard({name, link});
   placeInput.value = '';
   linkInput.value = '';
-  closePopupHandler(evt);
+  closePopup(popupAddForm);
 }
 
 formAddPopup.addEventListener('submit', submitAddForm); 
 
-function editOpener () {
-  popupEditForm.classList.add('popup_opened');
-  nameInput.value = nameProfile.textContent;
-  jobInput.value = jobProfile.textContent;
-}
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+} 
 
-function addOpener () {
-  popupAddForm.classList.add('popup_opened');
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
 }
 
 closeButtons.forEach(addCloseHandler);
 
 function addCloseHandler(button) {
-  button.addEventListener('click', closePopupHandler);
-}
-
-function closePopupHandler(e) {
-  const popup = e.target.closest('.popup');
-  popup.classList.remove('popup_opened');
+  button.addEventListener('click', (e) => {
+    const popup = e.target.closest('.popup');
+    closePopup(popup);  
+  });
 }
 
 function submitEditForm (evt) {
   evt.preventDefault(); 
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
-  closePopupHandler(evt);
+  closePopup(popupEditForm);
 }
 
-popupEditOpenButton.addEventListener('click', editOpener);
-popupAddOpenButton.addEventListener('click', addOpener);
-formEditPopup.addEventListener('submit', submitEditForm); 
+popupEditOpenButton.addEventListener('click', (evt) => {
+  nameInput.value = nameProfile.textContent;
+  jobInput.value = jobProfile.textContent;
+  openPopup(popupEditForm);
+});
+
+popupAddOpenButton.addEventListener('click', (evt) => {
+  openPopup(popupAddForm);
+});
+
+formEditPopup.addEventListener('submit', submitEditForm);
