@@ -50,9 +50,7 @@ const initialCards = [
 const elementTemplate = document.querySelector('#element-template').content;
 const elementsItems = document.querySelector('.elements');
 
-function renderInitialCards() {
-  initialCards.forEach(createCard);
-}
+initialCards.forEach(createCard);
 
 function createCard({name, link}) {
   const cardElement = elementTemplate.querySelector('.element').cloneNode(true);
@@ -67,13 +65,15 @@ function createCard({name, link}) {
     popupImageCaption.textContent = name;
     openPopup(popupImage);
   });
-  elementsItems.prepend(cardElement);
-
+  renderCard(cardElement);
   deleteEventListeners(cardElement);
   likeEventListeners(cardElement);
+  return cardElement;
 }
 
-renderInitialCards();
+function renderCard(item) {
+  elementsItems.prepend(item);
+}
 
 function handleDelete(evt) {
   evt.target.closest('.element').remove();
