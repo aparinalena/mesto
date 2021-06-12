@@ -54,7 +54,7 @@ initialCards.forEach(createCard);
 
 function createCard({name, link}) {
   const cardElement = elementTemplate.querySelector('.element').cloneNode(true);
-  let imageElement = cardElement.querySelector('.element__image');
+  const imageElement = cardElement.querySelector('.element__image');
   cardElement.querySelector('.element__title').textContent = name;
   imageElement.src = link;
   imageElement.alt = name;
@@ -93,8 +93,8 @@ function likeEventListeners(element) {
 
 function submitAddForm (evt) {
   evt.preventDefault(); 
-  let name = placeInput.value;
-  let link = linkInput.value; 
+  const name = placeInput.value;
+  const link = linkInput.value; 
   createCard({name, link});
   placeInput.value = '';
   linkInput.value = '';
