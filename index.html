@@ -19,7 +19,7 @@
         <div class="profile__info">
           <div class="profile__container">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__edit popup-open" aria-label="Редактировать"></button>
+            <button type="button" class="profile__edit edit-open" aria-label="Редактировать"></button>
           </div>
           <p class="profile__job">Исследователь океана</p>
         </div>
@@ -36,7 +36,7 @@
     <div class="popup popup_type_edit">
       <div class="popup__container">
        <button type="button" class="popup__close" aria-label="Закрыть попап"></button>
-       <form class="popup__form form-edit" name="form">
+       <form class="popup__form form-edit" name="form-edit">
           <h2 class="popup__title">Редактировать профиль</h2>
           <input type="text" class="popup__item popup__item_el_name" id="name" name="name" placeholder="Имя" required>
           <input type="text" class="popup__item popup__item_el_job" id="job" name="job" placeholder="О себе" required>
@@ -47,7 +47,7 @@
     <div class="popup popup_type_add">
       <div class="popup__container">
        <button type="button" class="popup__close" aria-label="Закрыть попап"></button>
-       <form class="popup__form form-add" name="form">
+       <form class="popup__form form-add" name="form-add">
           <h2 class="popup__title">Новое место</h2>
           <input type="text" class="popup__item popup__item_el_place" id="place" name="place" placeholder="Название" required>
           <input type="text" class="popup__item popup__item_el_link" id="link" name="link" placeholder="Ссылка на картинку" required>
