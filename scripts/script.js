@@ -105,7 +105,7 @@ formAddPopup.addEventListener('submit', submitAddForm);
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  keyHandler(popup);
+  document.addEventListener('keydown', addEscHandler);
 } 
 
 function closePopup(popup) {
@@ -121,13 +121,13 @@ function addCloseHandler(button) {
   });
 }
 
-function keyHandler(popup) {
-  document.addEventListener('keydown', function(evt) {
-    const key = evt.key;
+function addEscHandler(evt) {
+    const key = evt.key; 
     if (key === "Escape") {
+      const popup = document.querySelector('.popup_opened');
       closePopup(popup);
+      document.removeEventListener('keydown', addEscHandler);
     };
-  });
   }
 
 function submitEditForm (evt) {
