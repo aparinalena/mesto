@@ -105,6 +105,7 @@ formAddPopup.addEventListener('submit', submitAddForm);
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  keyHandler(popup);
 } 
 
 function closePopup(popup) {
@@ -116,8 +117,17 @@ closeButtons.forEach(addCloseHandler);
 function addCloseHandler(button) {
   button.addEventListener('click', (e) => {
     const popup = e.target.closest('.popup');
-    closePopup(popup);  
+    closePopup;  
   });
+}
+
+function keyHandler(popup) {
+document.addEventListener('keydown', function(evt) {
+  const key = evt.key;
+  if (key === "Escape") {
+    closePopup(popup);
+  };
+});
 }
 
 function submitEditForm (evt) {
@@ -138,3 +148,4 @@ popupAddOpenButton.addEventListener('click', (evt) => {
 });
 
 formEditPopup.addEventListener('submit', submitEditForm);
+
