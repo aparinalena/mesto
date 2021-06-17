@@ -117,18 +117,18 @@ closeButtons.forEach(addCloseHandler);
 function addCloseHandler(button) {
   button.addEventListener('click', (e) => {
     const popup = e.target.closest('.popup');
-    closePopup;  
+    closePopup(popup);  
   });
 }
 
 function keyHandler(popup) {
-document.addEventListener('keydown', function(evt) {
-  const key = evt.key;
-  if (key === "Escape") {
-    closePopup(popup);
-  };
-});
-}
+  document.addEventListener('keydown', function(evt) {
+    const key = evt.key;
+    if (key === "Escape") {
+      closePopup(popup);
+    };
+  });
+  }
 
 function submitEditForm (evt) {
   evt.preventDefault(); 
