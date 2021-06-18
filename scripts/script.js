@@ -105,11 +105,14 @@ formAddPopup.addEventListener('submit', submitAddForm);
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  document.addEventListener('keydown', addEscHandler);
+  document.addEventListener('keydown', closePopupEsc);
+  document.addEventListener('mousedown', closePopupMousedown);
 } 
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupEsc);
+  document.addEventListener('mousedown', closePopupMousedown);
 }
 
 closeButtons.forEach(addCloseHandler);
@@ -121,14 +124,20 @@ function addCloseHandler(button) {
   });
 }
 
-function addEscHandler(evt) {
+function closePopupEsc(evt) {
     const key = evt.key; 
     if (key === "Escape") {
       const popup = document.querySelector('.popup_opened');
       closePopup(popup);
-      document.removeEventListener('keydown', addEscHandler);
     };
   }
+
+function closePopupMousedown(evt) {
+  if (evt.target.classList.contains('popup_opened')) { 
+    const popup = document.querySelector('.popup_opened');
+    closePopup(popup);
+  }
+};
 
 function submitEditForm (evt) {
   evt.preventDefault(); 
@@ -148,4 +157,3 @@ popupAddOpenButton.addEventListener('click', (evt) => {
 });
 
 formEditPopup.addEventListener('submit', submitEditForm);
-
