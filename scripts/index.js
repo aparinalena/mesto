@@ -130,6 +130,9 @@ function resetValidationErrors(form) {
   errorsList.forEach((error) => {
     error.classList.remove('popup__error_visible');
   });
+  const buttonSubmit = form.querySelector('.popup__button');
+  buttonSubmit.classList.add('popup__button_disabled');
+  buttonSubmit.setAttribute('disabled', true);
 }
 
 popupEditOpenButton.addEventListener('click', (evt) => {
