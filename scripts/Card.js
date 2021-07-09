@@ -16,9 +16,8 @@ class Card {
   }
 
   _handleDelete = () => {
-    if (this._element) {
-      this._element.remove();
-    }
+    this._element.remove();
+    this._element = null;
   };
 
   _handleLike = (evt) => {

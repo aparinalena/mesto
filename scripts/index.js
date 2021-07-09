@@ -89,8 +89,7 @@ function closePopupEsc(evt) {
 
 function closePopupMousedown(evt) {
   if (evt.target.classList.contains("popup_opened")) {
-    const popup = document.querySelector(".popup_opened");
-    closePopup(popup);
+    closePopup(evt.target);
   }
 }
 
@@ -132,18 +131,18 @@ formEditPopup.addEventListener("submit", submitEditForm);
 
 formAddPopup.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  const cardElement = new Card(
-    { name: placeInput.value, link: linkInput.value },
-    "#element-template"
-  );
+  const cardElement = new Card({ name: placeInput.value, link: linkInput.value }, "#element-template");
   renderCard(cardElement.generateCard());
   closePopup(popupAddForm);
 });
 
-initialCards.forEach((item) => {
+function renderInitialCards(item) {
   const card = new Card(item, "#element-template");
-  const cardElement = card.generateCard();
-  document.querySelector(".elements").append(cardElement);
+  renderCard(card.generateCard());
+}
+
+initialCards.forEach((item) => {
+  renderInitialCards(item);
 });
 
 const validationSet = (selectorNames) => {
