@@ -58,7 +58,7 @@ _setListeners = () => {
   });
 };
 
-setValidation = () => {
+enableValidation = () => {
   this._setListeners();
   };
 }

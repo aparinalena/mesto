@@ -141,16 +141,16 @@ initialCards.forEach((item) => {
   document.querySelector('.elements').append(cardElement);
 }); 
 
-const enableValidation = (selectorNames) => {
+const validationSet = (selectorNames) => {
   const formList = Array.from(document.querySelectorAll(selectorNames.formSelector));
 
   formList.forEach((formElement) => {
     const formValidator = new FormValidator(selectorNames, formElement);
-    formValidator.setValidation();
+    formValidator.enableValidation();
   });
 };
 
-enableValidation({
+validationSet({
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
