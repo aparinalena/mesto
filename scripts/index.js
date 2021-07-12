@@ -45,12 +45,12 @@ const nameProfile = document.querySelector(".profile__name");
 const jobProfile = document.querySelector(".profile__job");
 
 export const popupImage = document.querySelector(".popup_type_image");
-export const popupImageCaption = document.querySelector(
-  ".popup__image-caption"
-);
+export const popupImageCaption = document.querySelector(".popup__image-caption");
 export const popupImageElement = document.querySelector(".popup__image");
 
-const closeButtons = document.querySelectorAll(".popup__close");
+export const closeButtons = document.querySelectorAll(".popup__close");
+
+export const popupList = document.querySelectorAll(".popup");
 
 const elementsItems = document.querySelector(".elements");
 
@@ -100,15 +100,7 @@ function submitEditForm(evt) {
   closePopup(popupEditForm);
 }
 
-function resetValidationErrors(form) {
-  const inputsList = Array.from(form.querySelectorAll(".popup__input"));
-  const errorsList = Array.from(form.querySelectorAll(".popup__error"));
-  inputsList.forEach((input) => {
-    input.classList.remove("popup__input_type_error");
-  });
-  errorsList.forEach((error) => {
-    error.classList.remove("popup__error_visible");
-  });
+export function disableSubmitButton(form) {
   const buttonSubmit = form.querySelector(".popup__button");
   buttonSubmit.classList.add("popup__button_disabled");
   buttonSubmit.setAttribute("disabled", true);
@@ -118,13 +110,11 @@ popupEditOpenButton.addEventListener("click", (evt) => {
   nameInput.value = nameProfile.textContent;
   jobInput.value = jobProfile.textContent;
   openPopup(popupEditForm);
-  resetValidationErrors(popupEditForm);
 });
 
 popupAddOpenButton.addEventListener("click", (evt) => {
   openPopup(popupAddForm);
   formAddPopup.reset();
-  resetValidationErrors(popupAddForm);
 });
 
 formEditPopup.addEventListener("submit", submitEditForm);
