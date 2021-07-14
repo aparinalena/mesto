@@ -116,23 +116,23 @@ const validationSet = {
   errorClass: "popup__error_visible",
 };
 
-const editValidate = new FormValidator(validationSet, formEditPopup);
-const addValidate = new FormValidator(validationSet, formAddPopup);
+const editFormValidator = new FormValidator(validationSet, formEditPopup);
+const addFormValidator = new FormValidator(validationSet, formAddPopup);
 
-editValidate.enableValidation();
-addValidate.enableValidation();
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
 
 popupEditOpenButton.addEventListener("click", () => {
   nameInput.value = nameProfile.textContent;
   jobInput.value = jobProfile.textContent;
   openPopup(popupEditForm);
-  editValidate.resetValidationErrors();
+  editFormValidator.resetValidationErrors();
 });
 
 popupAddOpenButton.addEventListener("click", () => {
   openPopup(popupAddForm);
   formAddPopup.reset();
-  addValidate.resetValidationErrors();
+  addFormValidator.resetValidationErrors();
 });
 
 formEditPopup.addEventListener("submit", submitEditForm);
