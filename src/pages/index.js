@@ -12,7 +12,8 @@ import {
   formAddPopup,
   nameInput,
   jobInput,
-} from "../utilis/constants.js";
+  validationSet
+} from "../utils/constants.js";
 
 const initialCardList = new Section(
   {
@@ -69,15 +70,6 @@ popupEditOpenButton.addEventListener("click", function () {
   popupEditForm.open();
   editFormValidator.resetValidationErrors();
 });
-
-const validationSet = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
-};
 
 const editFormValidator = new FormValidator(validationSet, formEditPopup);
 const addFormValidator = new FormValidator(validationSet, formAddPopup);
