@@ -1,27 +1,34 @@
+import tokioImage from "../images/tokyo.jpg";
+import kiotoImage from "../images/kyoto.jpg";
+import fujiImage from "../images/mount-fuji.jpg";
+import fushimiImage from "../images/fushimi.jpg";
+import tenryuImage from "../images/tenryu-ji.jpg";
+import toriiImage from "../images/torii-gate.jpg";
+
 export const initialCards = [
   {
     name: "Токио",
-    link: "./images/tokyo.jpg",
+    link: tokioImage,
   },
   {
     name: "Киото",
-    link: "./images/kyoto.jpg",
+    link: kiotoImage,
   },
   {
     name: "Гора Фудзи",
-    link: "./images/mount-fuji.jpg",
+    link: fujiImage,
   },
   {
     name: "Храмы Фусими Инари",
-    link: "./images/fushimi.jpg",
+    link: fushimiImage,
   },
   {
     name: "Храм Тенрю-дзи",
-    link: "./images/tenryu-ji.jpg",
+    link: tenryuImage,
   },
   {
     name: "Тории храма Хаконе",
-    link: "./images/torii-gate.jpg",
+    link: toriiImage,
   },
 ];
 
