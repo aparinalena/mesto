@@ -1,37 +1,3 @@
-import tokioImage from "../images/tokyo.jpg";
-import kiotoImage from "../images/kyoto.jpg";
-import fujiImage from "../images/mount-fuji.jpg";
-import fushimiImage from "../images/fushimi.jpg";
-import tenryuImage from "../images/tenryu-ji.jpg";
-import toriiImage from "../images/torii-gate.jpg";
-
-export const initialCards = [
-  {
-    name: "Токио",
-    link: tokioImage,
-  },
-  {
-    name: "Киото",
-    link: kiotoImage,
-  },
-  {
-    name: "Гора Фудзи",
-    link: fujiImage,
-  },
-  {
-    name: "Храмы Фусими Инари",
-    link: fushimiImage,
-  },
-  {
-    name: "Храм Тенрю-дзи",
-    link: tenryuImage,
-  },
-  {
-    name: "Тории храма Хаконе",
-    link: toriiImage,
-  },
-];
-
 export const validationSet = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
@@ -43,9 +9,13 @@ export const validationSet = {
 
 export const popupAddOpenButton = document.querySelector(".add-open");
 export const popupEditOpenButton = document.querySelector(".edit-open");
+export const popupAvatarOpenButton = document.querySelector(
+  ".profile__avatar-edit"
+);
 
-export const formEditPopup = document.querySelector(".form-edit");
-export const formAddPopup = document.querySelector(".form-add");
+// export const formEditPopup = document.querySelector(".form-edit");
+// export const formAddPopup = document.querySelector(".form-add");
+// export const formAvatarPopup = document.querySelector(".form-avatar-edit");
 
-export const nameInput = document.querySelector(".popup__input_el_name");
-export const jobInput = document.querySelector(".popup__input_el_job");
+const popupEdit = document.querySelector(".popup_type_edit");
+export const popupEditInputs = popupEdit.querySelectorAll(".popup__input");

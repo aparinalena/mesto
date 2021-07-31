@@ -1,5 +1,5 @@
-.element__trash {
-    background-image: url(../../../images/trash_icon.svg);
+.element__trash_visible {
+    background-image: url(../../../../images/trash_icon.svg);
     width: 18px;
     height: 19px;
     margin: 0;
@@ -11,7 +11,7 @@
     top: 20px;
 }
 
-.element__trash:hover {
+.element__trash_visible:hover {
     opacity: 0.5;
     cursor: pointer;
 }
