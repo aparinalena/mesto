@@ -13,23 +13,9 @@ import {
   popupEditOpenButton,
   popupAvatarOpenButton,
   popupEditInputs,
-  //selectors
+  selectors,
   validationSet,
 } from "../utils/constants.js";
-
-const selectors = {
-  popupImageSelector: ".popup_type_image",
-  popupEditSelector: ".popup_type_edit",
-  popupAddSelector: ".popup_type_add",
-  popupAvatarSelector: ".popup_type_edit-avatar",
-  popupDeleteSelector: ".popup_type_delete",
-  elementsSelector: ".elements",
-  nameSelector: ".profile__name",
-  jobSelector: ".profile__job",
-  avatarSelector: ".profile__avatar",
-  cardId: "#element-template",
-  trashCard: ".element__trash",
-};
 
 const api = new Api({
   baseUrl: "https://mesto.nomoreparties.co/v1/cohort-26",
