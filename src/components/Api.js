@@ -1,10 +1,10 @@
 export default class Api {
   constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
+    this._token = headers["authorization"];
     this._userUrl = `${this._baseUrl}/users/me`;
     this._cardsUrl = `${this._baseUrl}/cards`;
     this._likesUrl = `${this._baseUrl}/cards/likes`;
-    this._token = headers["authorization"];
   }
 
   getUserData() {
@@ -16,7 +16,7 @@ export default class Api {
   }
 
   saveUserChanges({ name, about }) {
-    return fetch(`${this._baseUrl}/users/me`, {
+    return fetch(this._userUrl, {
       method: "PATCH",
       headers: {
         authorization: this._token,
@@ -29,7 +29,15 @@ export default class Api {
     }).then(this._checkResponse);
   }
 
-  changedAvatar(src) {
+  getCards() {
+    return fetch(this._cardsUrl, {
+      headers: {
+        authorization: this._token,
+      },
+    }).then(this._checkResponse);
+  }
+
+  changeAvatar(src) {
     return fetch(`${this._userUrl}/avatar`, {
       method: "PATCH",
       headers: {
@@ -42,15 +50,7 @@ export default class Api {
     }).then(this._checkResponse);
   }
 
-  getInitialCards() {
-    return fetch(this._cardsUrl, {
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._checkResponse);
-  }
-
-  postNewCard({ name, link }) {
+  postCard({ name, link }) {
     return fetch(this._cardsUrl, {
       method: "POST",
       headers: {
